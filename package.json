@@ -2,13 +2,13 @@
   "name": "svg-logo-maker",
   "version": "1.0.0",
   "description": "",
-  "main": "indes.js",
+  "main": "index.js",
   "directories": {
     "example": "examples",
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.com/ulisesd15/SVG-Logo-Maker#readme",
   "dependencies": {
-    "inquirer": "^8.2.4",
+    "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
     "jest": "^29.7.0"
   }
 }
