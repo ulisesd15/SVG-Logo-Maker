@@ -15,9 +15,10 @@ const promptUser = () => {
             message: 'Enter a text color for your logo: '
         },
         {
-            type: 'input',
+            type: 'list',
             name: 'shape',
-            message: 'Enter the shape of your logo: (circle, square, or triangle)'
+            message: 'Enter the shape of your logo:',
+            choices: ['square', 'circle', 'triangle']
         }, 
         {
             type: 'input',
@@ -27,6 +28,11 @@ const promptUser = () => {
     ])
 
 };
+
+const svg = document.createElementNS('http://www.w3.org/2000/svg', 'logo.svg');
+svg.setAttribute('width', '300');
+svg.setAttribute('height', '200');
+
 
 const writeToFile = (fileName, data) => {
     fs.writeFile(fileName, data, (err) => {
@@ -46,3 +52,5 @@ const init = () => {
 };
 
 init();
+
+module.exports = { promptUser };
